@@ -49,3 +49,9 @@
   border: 1px solid #9e4b4b;
   background-color: #9e4b4b;
 }
+
+.base-all-btn {
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 0.3rem 1rem;
+}

@@ -16,6 +16,7 @@ class App extends React.Component {
     this.fireFilter = this.fireFilter.bind(this);
     this.psychicFilter = this.psychicFilter.bind(this);
 
+    this.selectAll = this.selectAll.bind(this);
     this.selectFire = this.selectFire.bind(this);
     this.selectPsychic = this.selectPsychic.bind(this);
   }
@@ -30,6 +31,12 @@ class App extends React.Component {
   psychicFilter() {
     const psychicPokemons = pokemons.filter((pokemon) => pokemon.type === 'Psychic');
     return psychicPokemons;
+  }
+
+  selectAll() {
+    this.setState({
+      selectedFilter: this.allPokemons(),
+    });
   }
 
   selectFire() {
@@ -52,6 +59,9 @@ class App extends React.Component {
           <button className="base-btn filter-button" onClick={this.selectPsychic}>Psychic</button>
         </div>
         <Pokedex pokemons={this.state.selectedFilter} />
+        <div>
+          <button className="base-all-btn filter-button" onClick={this.selectAll}>All</button>
+        </div>
       </div>
     );
   }
