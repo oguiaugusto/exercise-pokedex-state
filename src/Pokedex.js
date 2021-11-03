@@ -48,9 +48,9 @@ class Pokedex extends React.Component {
         <div className="pokedex">
           <Pokemon pokemon={this.props.pokemons[this.state.pokeIndex]} />
         </div>
-        <div className="buttons">
-          <button className="nav-button" onClick={this.previousPokemon}>Anterior</button>
-          <button className="nav-button" onClick={this.nextPokemon}>Próximo</button>
+        <div className="nav-buttons">
+          <button className="base-btn nav-button" onClick={this.previousPokemon}>Anterior</button>
+          <button className="base-btn nav-button" onClick={this.nextPokemon}>Próximo</button>
         </div>
       </>
     );

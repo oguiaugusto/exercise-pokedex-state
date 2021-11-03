@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
 import pokemons from './data';
 import Pokedex from './Pokedex';
+import './Main.css';
+import './Buttons.css';
 
 class App extends React.Component {
   constructor() {
@@ -47,8 +48,8 @@ class App extends React.Component {
       <div className="App">
         <h1> Pokedex </h1>
         <div className="select-type">
-          <button onClick={this.selectFire}>Fire</button>
-          <button onClick={this.selectPsychic}>Psychic</button>
+          <button className="base-btn filter-button" onClick={this.selectFire}>Fire</button>
+          <button className="base-btn filter-button" onClick={this.selectPsychic}>Psychic</button>
         </div>
         <Pokedex pokemons={this.state.selectedFilter} />
       </div>
