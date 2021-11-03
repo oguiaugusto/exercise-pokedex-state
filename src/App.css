@@ -6,7 +6,7 @@ body {
   text-align: center;
 }
 
-button {
+.nav-button {
   padding: 1rem;
   border-radius: 1rem;
   margin: 0 1rem;
@@ -15,12 +15,12 @@ button {
   transition-duration: 0.5s
 }
 
-button:hover {
+.nav-button:hover {
   background-color: #e0e26f;
   border-color: #e0e26f;
 }
 
-button:active {
+.nav-button:active {
   background-color: #cfd164;
   border-color: #cfd164;
 }
