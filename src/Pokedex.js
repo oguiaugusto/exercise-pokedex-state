@@ -69,8 +69,8 @@ class Pokedex extends React.Component {
           <Pokemon pokemon={this.state.selectedFilter[this.state.pokeIndex]} />
         </div>
         <div className="nav-buttons">
-          <button className="base-btn nav-button" onClick={this.previousPokemon}>Anterior</button>
-          <button className="base-btn nav-button" onClick={this.nextPokemon}>Próximo</button>
+          <button className="base-btn nav-button" onClick={this.previousPokemon} disabled={this.state.selectedFilter.length < 2}>Anterior</button>
+          <button className="base-btn nav-button" onClick={this.nextPokemon} disabled={this.state.selectedFilter.length < 2}>Próximo</button>
         </div>
       </>
     );
