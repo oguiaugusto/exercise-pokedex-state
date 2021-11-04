@@ -5,3 +5,8 @@ body {
 .App {
   text-align: center;
 }
+
+.pokedex {
+  width: 60%;
+  margin: 10px auto;
+}

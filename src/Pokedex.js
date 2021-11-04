@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Buttons from './Buttons';
 import pokemons from './data';
 import Pokemon from './Pokemon';
 
@@ -15,14 +15,6 @@ class Pokedex extends React.Component {
     this.nextPokemon = this.nextPokemon.bind(this);
     this.previousPokemon = this.previousPokemon.bind(this);
     this.filterType = this.filterType.bind(this);
-
-    // this.fireFilter = this.fireFilter.bind(this);
-    // this.psychicFilter = this.psychicFilter.bind(this);
-
-    // this.selectAll = this.selectAll.bind(this);
-    // this.selectFire = this.selectFire.bind(this);
-    // this.selectPsychic = this.selectPsychic.bind(this);
-
   }
   
   nextPokemon() {
@@ -71,18 +63,14 @@ class Pokedex extends React.Component {
     return (
       <>
         <div className="select-type">
-          <Button classes="base-btn filter-button" click={this.filterType}>Fire</Button>
-          <Button classes="base-btn filter-button" click={this.filterType}>Psychic</Button>
+          <Buttons classes="base-btn filter-button" click={this.filterType} pokemons={pokemons} />
         </div>
         <div className="pokedex">
           <Pokemon pokemon={this.state.selectedFilter[this.state.pokeIndex]} />
         </div>
         <div className="nav-buttons">
-          <Button classes="base-btn nav-button" click={this.previousPokemon}>Anterior</Button>
-          <Button classes="base-btn nav-button" click={this.nextPokemon}>Próximo</Button>
-        </div>
-        <div>
-          <Button classes="base-all-btn filter-button" click={this.filterType}>All</Button>
+          <button className="base-btn nav-button" onClick={this.previousPokemon}>Anterior</button>
+          <button className="base-btn nav-button" onClick={this.nextPokemon}>Próximo</button>
         </div>
       </>
     );
